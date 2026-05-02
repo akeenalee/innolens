@@ -1409,11 +1409,45 @@
 
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
+  function showResult(el, type, msg) {
+    el.style.display = 'block';
+    if (type === 'success') {
+      el.style.background = 'rgba(42,157,143,0.15)';
+      el.style.color = '#2A9D8F';
+      el.style.border = '1px solid rgba(42,157,143,0.3)';
+    } else {
+      el.style.background = 'rgba(220,50,50,0.1)';
+      el.style.color = '#ff6b6b';
+      el.style.border = '1px solid rgba(220,50,50,0.2)';
+    }
+    el.textContent = msg;
+  }
+
   async function handleSubmit(e) {
     e.preventDefault();
     const btn = document.getElementById('submit-btn');
     const result = document.getElementById('form-result');
     const form = btn.closest('.contact-form');
+
+    // Validation
+    const firstName = form.querySelector('[name="first_name"]').value.trim();
+    const lastName = form.querySelector('[name="last_name"]').value.trim();
+    const email = form.querySelector('[name="email"]').value.trim();
+    const message = form.querySelector('[name="message"]').value.trim();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!firstName || !lastName) {
+      showResult(result, 'error', 'Please enter your first and last name.');
+      return;
+    }
+    if (!email || !emailRegex.test(email)) {
+      showResult(result, 'error', 'Please enter a valid email address.');
+      return;
+    }
+    if (!message) {
+      showResult(result, 'error', 'Please enter a message before submitting.');
+      return;
+    }
 
     btn.textContent = 'Sending...';
     btn.disabled = true;
@@ -1439,11 +1473,7 @@
       const data = await response.json();
 
       if (data.success) {
-        result.style.display = 'block';
-        result.style.background = 'rgba(42,157,143,0.15)';
-        result.style.color = '#2A9D8F';
-        result.style.border = '1px solid rgba(42,157,143,0.3)';
-        result.textContent = 'Message sent successfully. We will be in touch within one business day.';
+        showResult(result, 'success', 'Message sent successfully. We will be in touch within one business day.');
         form.querySelectorAll('input:not([type=hidden]):not([type=checkbox]), select, textarea').forEach(el => el.value = '');
         btn.textContent = 'Message Sent!';
         setTimeout(() => {
@@ -1456,11 +1486,7 @@
         throw new Error(data.message || 'Submission failed');
       }
     } catch (err) {
-      result.style.display = 'block';
-      result.style.background = 'rgba(220,50,50,0.1)';
-      result.style.color = '#ff6b6b';
-      result.style.border = '1px solid rgba(220,50,50,0.2)';
-      result.textContent = 'Something went wrong. Please try again or email info@innolensresources.com directly.';
+      showResult(result, 'error', 'Something went wrong. Please try again or email info@innolensresources.com directly.');
       btn.textContent = 'Send Message →';
       btn.disabled = false;
       btn.style.opacity = '';
