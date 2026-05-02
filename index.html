@@ -5,987 +5,261 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Innovation Lens Resources Ltd | IT, Telecom & Management Consulting</title>
 <meta name="description" content="Innovation Lens Resources Ltd delivers turnaround solutions in IT/Telecom, Fixed Asset Management, and Management Consulting across Nigeria and beyond.">
+<meta property="og:title" content="Innovation Lens Resources Ltd">
+<meta property="og:description" content="Professional business services firm delivering turnaround solutions in IT/Telecom and Management Consulting.">
+<meta property="og:url" content="https://www.innolensresources.com">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :root {
-    --primary: #1B4F8A;
-    --primary-light: #4A90C4;
-    --primary-pale: #EBF4F9;
-    --navy: #0A1628;
-    --navy-mid: #132340;
-    --navy-soft: #1A3050;
-    --slate: #2A9D8F;
-    --mid: #5B8DB8;
-    --light: #A8C8E0;
-    --offwhite: #F7F5F0;
-    --white: #FFFFFF;
-    --text: #1A2030;
-    --text-soft: #4A5568;
-    --radius: 4px;
-    --radius-lg: 10px;
-  }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--white);
-    color: var(--text);
-    font-size: 16px;
-    line-height: 1.7;
-    overflow-x: hidden;
-  }
-
-  /* NAV */
-  nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    background: rgba(10, 22, 40, 0.96);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(27,79,138,0.25);
-  }
-
-  .nav-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    height: 68px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .nav-logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    text-decoration: none;
-  }
-
-  .logo-mark {
-    width: 44px;
-    height: 44px;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    overflow: hidden;
-  }
-
-  .logo-mark img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-
-  .logo-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.2;
-  }
-
-  .logo-name {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--white);
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-  }
-
-  .logo-tagline {
-    font-size: 10px;
-    color: var(--primary-light);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
-  .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    list-style: none;
-  }
-
-  .nav-links a {
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--light);
-    text-decoration: none;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    transition: color 0.2s;
-  }
-
-  .nav-links a:hover { color: var(--primary-light); }
-
-  .nav-cta {
-    background: var(--primary) !important;
-    color: var(--navy) !important;
-    padding: 8px 20px;
-    border-radius: var(--radius);
-    font-weight: 600 !important;
-  }
-
-  .nav-cta:hover { background: #2A9D8F !important; }
-
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    padding: 4px;
-  }
-  .hamburger span {
-    width: 24px; height: 2px;
-    background: var(--light);
-    border-radius: 2px;
-    transition: all 0.3s;
-  }
-
-  /* HERO */
-  #hero {
-    min-height: 100vh;
-    background: var(--navy);
-    position: relative;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-  }
-
-  .hero-bg-pattern {
-    position: absolute;
-    inset: 0;
-    background-image:
-      linear-gradient(rgba(27,79,138,0.06) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(27,79,138,0.06) 1px, transparent 1px);
-    background-size: 60px 60px;
-  }
-
-  .hero-accent-bar {
-    position: absolute;
-    top: 0; left: 0;
-    width: 4px;
-    height: 100%;
-    background: linear-gradient(to bottom, #2A9D8F, #1B4F8A, transparent);
-  }
-
-  .hero-orb {
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(27,79,138,0.1) 0%, transparent 70%);
-    top: -100px; right: -100px;
-    pointer-events: none;
-  }
-
-  .hero-inner {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 8rem 2rem 4rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-  }
-
-  .hero-eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: #2A9D8F;
-    margin-bottom: 1.5rem;
-  }
-
-  .hero-eyebrow::before {
-    content: '';
-    display: block;
-    width: 28px; height: 1px;
-    background: #2A9D8F;
-  }
-
-  .hero-title {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2.4rem, 4vw, 3.6rem);
-    font-weight: 700;
-    color: var(--white);
-    line-height: 1.15;
-    margin-bottom: 1.5rem;
-  }
-
-  .hero-title em {
-    font-style: normal;
-    color: #52B788;
-  }
-
-  .hero-desc {
-    font-size: 17px;
-    color: var(--light);
-    line-height: 1.8;
-    margin-bottom: 2.5rem;
-    font-weight: 300;
-  }
-
-  .hero-actions {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  .btn-primary {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: var(--primary);
-    color: var(--navy);
-    font-size: 14px;
-    font-weight: 600;
-    padding: 14px 28px;
-    border-radius: var(--radius);
-    text-decoration: none;
-    letter-spacing: 0.02em;
-    transition: all 0.2s;
-    border: none;
-    cursor: pointer;
-  }
-
-  .btn-primary:hover {
-    background: #2A9D8F;
-    transform: translateY(-1px);
-  }
-
-  .btn-outline {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: transparent;
-    color: var(--light);
-    font-size: 14px;
-    font-weight: 500;
-    padding: 14px 28px;
-    border-radius: var(--radius);
-    text-decoration: none;
-    border: 1px solid rgba(184, 202, 217, 0.3);
-    transition: all 0.2s;
-  }
-
-  .btn-outline:hover {
-    border-color: var(--primary);
-    color: var(--primary-light);
-  }
-
-  .hero-stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: rgba(255,255,255,0.06);
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.06);
-  }
-
-  .stat-item {
-    padding: 1.5rem;
-    background: rgba(13,27,46,0.6);
-    text-align: center;
-  }
-
-  .stat-number {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: #4A90C4;
-    display: block;
-  }
-
-  .stat-label {
-    font-size: 11px;
-    color: var(--mid);
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    margin-top: 4px;
-  }
-
-  .hero-visual {
-    position: relative;
-  }
-
-  .hero-card-stack {
-    position: relative;
-    padding: 2rem;
-  }
-
-  .service-preview-card {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(27,79,138,0.2);
-    border-radius: var(--radius-lg);
-    padding: 1.5rem;
-    margin-bottom: 1rem;
-    transition: all 0.3s;
-    cursor: default;
-  }
-
-  .service-preview-card:hover {
-    background: rgba(42,157,143,0.08);
-    border-color: rgba(27,79,138,0.5);
-    transform: translateX(4px);
-  }
-
-  .spc-icon {
-    width: 36px; height: 36px;
-    background: rgba(27,79,138,0.12);
-    border-radius: var(--radius);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-    font-size: 16px;
-  }
-
-  .spc-title {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--white);
-    margin-bottom: 4px;
-  }
-
-  .spc-desc {
-    font-size: 12px;
-    color: var(--mid);
-    line-height: 1.5;
-  }
-
-  /* SECTIONS */
-  section { padding: 6rem 2rem; }
-
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .section-eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: #2A9D8F;
-    margin-bottom: 1rem;
-  }
-
-  .section-eyebrow::before {
-    content: '';
-    display: block;
-    width: 20px; height: 1px;
-    background: #2A9D8F;
-  }
-
-  .section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(1.8rem, 3vw, 2.6rem);
-    font-weight: 700;
-    color: var(--text);
-    line-height: 1.2;
-    margin-bottom: 1rem;
-  }
-
-  .section-title.light { color: var(--white); }
-
-  .section-subtitle {
-    font-size: 17px;
-    color: var(--text-soft);
-    max-width: 560px;
-    line-height: 1.7;
-    margin-bottom: 3rem;
-    font-weight: 300;
-  }
-
-  .section-subtitle.light { color: var(--light); }
-
-  /* ABOUT */
-  #about { background: var(--offwhite); }
-
-  .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    align-items: start;
-  }
-
-  .about-values {
-    display: grid;
-    gap: 1.25rem;
-    margin-top: 2rem;
-  }
-
-  .value-item {
-    display: flex;
-    gap: 1rem;
-    padding: 1.25rem;
-    background: var(--white);
-    border-radius: var(--radius-lg);
-    border: 1px solid rgba(0,0,0,0.06);
-  }
-
-  .value-icon {
-    width: 42px; height: 42px;
-    background: var(--primary-pale);
-    border-radius: var(--radius);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    flex-shrink: 0;
-  }
-
-  .value-text strong {
-    display: block;
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--text);
-    margin-bottom: 4px;
-  }
-
-  .value-text p {
-    font-size: 13px;
-    color: var(--text-soft);
-    line-height: 1.6;
-  }
-
-  .about-story p {
-    font-size: 16px;
-    color: var(--text-soft);
-    line-height: 1.8;
-    margin-bottom: 1.25rem;
-    font-weight: 300;
-  }
-
-  .about-highlight {
-    padding: 1.5rem;
-    border-left: 3px solid #2A9D8F;
-    background: var(--primary-pale);
-    border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
-    margin: 2rem 0;
-  }
-
-  .about-highlight p {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.1rem;
-    font-style: italic;
-    color: #0A1628;
-    margin: 0 !important;
-    line-height: 1.6;
-  }
-
-  /* SERVICES */
-  #services { background: var(--white); }
-
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 1rem;
-  }
-
-  .service-card {
-    background: var(--white);
-    border: 1px solid rgba(0,0,0,0.08);
-    border-radius: var(--radius-lg);
-    padding: 2rem;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s;
-  }
-
-  .service-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #1B4F8A, #2A9D8F);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s;
-  }
-
-  .service-card:hover {
-    box-shadow: 0 12px 40px rgba(0,0,0,0.08);
-    transform: translateY(-4px);
-  }
-
-  .service-card:hover::before { transform: scaleX(1); }
-
-  .service-icon {
-    width: 52px; height: 52px;
-    background: var(--primary-pale);
-    border-radius: var(--radius-lg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    margin-bottom: 1.25rem;
-  }
-
-  .service-card h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--text);
-    margin-bottom: 0.75rem;
-  }
-
-  .service-card p {
-    font-size: 14px;
-    color: var(--text-soft);
-    line-height: 1.7;
-    margin-bottom: 1.25rem;
-    font-weight: 300;
-  }
-
-  .service-features {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
-
-  .service-features li {
-    font-size: 13px;
-    color: var(--text-soft);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .service-features li::before {
-    content: '';
-    width: 6px; height: 6px;
-    border-radius: 50%;
-    background: #2A9D8F;
-    flex-shrink: 0;
-  }
-
-  /* WHY US */
-  #why {
-    background: var(--navy);
-    position: relative;
-    overflow: hidden;
-  }
-
-  #why::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image:
-      linear-gradient(rgba(27,79,138,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(27,79,138,0.04) 1px, transparent 1px);
-    background-size: 60px 60px;
-  }
-
-  .why-inner { position: relative; }
-
-  .why-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    margin-top: 1rem;
-  }
-
-  .why-card {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(27,79,138,0.12);
-    border-radius: var(--radius-lg);
-    padding: 2rem;
-    transition: all 0.3s;
-  }
-
-  .why-card:hover {
-    background: rgba(42,157,143,0.08);
-    border-color: rgba(27,79,138,0.4);
-  }
-
-  .why-card .num {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: rgba(27,79,138,0.3);
-    line-height: 1;
-    margin-bottom: 0.5rem;
-  }
-
-  .why-card h4 {
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--white);
-    margin-bottom: 0.5rem;
-  }
-
-  .why-card p {
-    font-size: 13px;
-    color: var(--mid);
-    line-height: 1.7;
-    font-weight: 300;
-  }
-
-  /* SECTORS */
-  #sectors { background: var(--offwhite); }
-
-  .sectors-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    margin-top: 1rem;
-  }
-
-  .sector-card {
-    background: var(--white);
-    border: 1px solid rgba(0,0,0,0.06);
-    border-radius: var(--radius-lg);
-    padding: 1.5rem;
-    text-align: center;
-    transition: all 0.3s;
-  }
-
-  .sector-card:hover {
-    border-color: #2A9D8F;
-    transform: translateY(-3px);
-  }
-
-  .sector-icon {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    display: block;
-  }
-
-  .sector-card h4 {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--text);
-    margin-bottom: 6px;
-  }
-
-  .sector-card p {
-    font-size: 12px;
-    color: var(--text-soft);
-    line-height: 1.6;
-  }
-
-  /* CONTACT */
-  #contact {
-    background: var(--navy);
-    position: relative;
-    overflow: hidden;
-  }
-
-  #contact::after {
-    content: '';
-    position: absolute;
-    bottom: 0; right: 0;
-    width: 400px; height: 400px;
-    background: radial-gradient(circle, rgba(42,157,143,0.08) 0%, transparent 70%);
-    pointer-events: none;
-  }
-
-  .contact-inner {
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    align-items: start;
-  }
-
-  .contact-info h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: var(--white);
-    line-height: 1.2;
-    margin-bottom: 1.5rem;
-  }
-
-  .contact-info p {
-    font-size: 16px;
-    color: var(--light);
-    line-height: 1.8;
-    margin-bottom: 2rem;
-    font-weight: 300;
-  }
-
-  .contact-details {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .contact-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .contact-item-icon {
-    width: 36px; height: 36px;
-    background: rgba(27,79,138,0.12);
-    border-radius: var(--radius);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    flex-shrink: 0;
-  }
-
-  .contact-item span {
-    font-size: 14px;
-    color: var(--light);
-  }
-
-  .contact-form {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: var(--radius-lg);
-    padding: 2.5rem;
-  }
-
-  .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    margin-bottom: 1rem;
-  }
-
-  .form-group label {
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--light);
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-  }
-
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: var(--radius);
-    padding: 12px 14px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    color: var(--white);
-    outline: none;
-    transition: border-color 0.2s;
-    width: 100%;
-  }
-
-  .form-group input::placeholder,
-  .form-group textarea::placeholder { color: var(--slate); }
-
-  .form-group input:focus,
-  .form-group select:focus,
-  .form-group textarea:focus {
-    border-color: #2A9D8F;
-  }
-
-  .form-group select option { background: var(--navy-mid); color: var(--white); }
-
-  .form-group textarea { resize: vertical; min-height: 120px; }
-
-  .form-submit {
-    width: 100%;
-    padding: 14px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-    cursor: pointer;
-  }
-
-  /* FOOTER */
-  footer {
-    background: #070F1C;
-    padding: 4rem 2rem 2rem;
-    border-top: 1px solid rgba(27,79,138,0.2);
-  }
-
-  .footer-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .footer-top {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 3rem;
-    padding-bottom: 3rem;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-    margin-bottom: 2rem;
-  }
-
-  .footer-brand p {
-    font-size: 14px;
-    color: var(--mid);
-    line-height: 1.7;
-    margin-top: 1rem;
-    font-weight: 300;
-  }
-
-  .footer-col h5 {
-    font-size: 11px;
-    font-weight: 600;
-    color: var(--primary);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 1.25rem;
-  }
-
-  .footer-col ul { list-style: none; }
-
-  .footer-col ul li {
-    margin-bottom: 0.6rem;
-  }
-
-  .footer-col ul li a {
-    font-size: 13px;
-    color: var(--mid);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-
-  .footer-col ul li a:hover { color: var(--primary-light); }
-
-  .footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .footer-bottom p {
-    font-size: 12px;
-    color: var(--slate);
-  }
-
-  .footer-legal {
-    display: flex;
-    gap: 1.5rem;
-  }
-
-  .footer-legal a {
-    font-size: 12px;
-    color: var(--slate);
-    text-decoration: none;
-  }
-
-  .footer-legal a:hover { color: var(--mid); }
-
-  /* UTILITY */
-  .divider {
-    width: 48px;
-    height: 2px;
-    background: var(--primary);
-    margin-bottom: 2rem;
-  }
-
-  .tag {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    padding: 4px 12px;
-    border-radius: 2px;
-    background: var(--primary-pale);
-    color: var(--primary);
-    margin-bottom: 1rem;
-  }
-
-  /* ANIMATIONS */
-  .fade-up {
-    opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-  .fade-up.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* RESPONSIVE */
-  @media (max-width: 900px) {
-    .hero-inner { grid-template-columns: 1fr; padding-top: 7rem; }
-    .hero-visual { display: none; }
-    .about-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .services-grid { grid-template-columns: 1fr; }
-    .why-grid { grid-template-columns: 1fr; }
-    .sectors-grid { grid-template-columns: repeat(2, 1fr); }
-    .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
-    .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
-    .nav-links { display: none; }
-    .hamburger { display: flex; }
-  }
-
-  @media (max-width: 600px) {
-    section { padding: 4rem 1.25rem; }
-    .hero-inner { padding: 6rem 1.25rem 3rem; }
-    .hero-stats { grid-template-columns: 1fr; }
-    .form-row { grid-template-columns: 1fr; }
-    .footer-top { grid-template-columns: 1fr; }
-    .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
-    .sectors-grid { grid-template-columns: repeat(2, 1fr); }
-  }
-
-  /* Mobile Nav */
-  .mobile-menu {
-    display: none;
-    position: fixed;
-    top: 68px; left: 0; right: 0;
-    background: rgba(13,27,46,0.98);
-    border-top: 1px solid rgba(27,79,138,0.2);
-    padding: 1.5rem 2rem;
-    z-index: 99;
-  }
-
-  .mobile-menu.open { display: block; }
-
-  .mobile-menu a {
-    display: block;
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--light);
-    text-decoration: none;
-    padding: 12px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-    transition: color 0.2s;
-  }
-
-  .mobile-menu a:hover { color: var(--primary-light); }
-  .mobile-menu a:last-child { border-bottom: none; }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blue:#1B4F8A;--blue-mid:#2563A8;--blue-light:#4A90C4;--blue-pale:#EBF4F9;
+  --teal:#2A9D8F;--teal-light:#3BB5A6;--teal-pale:#E6F5F3;--green:#52B788;
+  --navy:#0A1628;--navy-mid:#132340;--navy-soft:#1C3255;--slate:#3D5A73;
+  --mid:#6B8FA8;--light:#A8C8E0;--offwhite:#F4F7FA;--white:#FFFFFF;
+  --text:#0F1923;--text-soft:#455569;--text-lighter:#7A8FA3;
+  --radius:6px;--radius-lg:12px;--radius-xl:20px;
+  --shadow-sm:0 2px 8px rgba(27,79,138,.08);--shadow-md:0 8px 32px rgba(27,79,138,.12);--shadow-lg:0 20px 60px rgba(27,79,138,.16)
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);font-size:16px;line-height:1.7;overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,22,40,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(74,144,196,.15);transition:box-shadow .3s}
+nav.scrolled{box-shadow:0 4px 24px rgba(0,0,0,.3)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;height:70px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-mark{width:46px;height:46px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden;background:var(--white);padding:3px}
+.logo-mark img{width:100%;height:100%;object-fit:contain}
+.logo-text{display:flex;flex-direction:column;line-height:1.2}
+.logo-name{font-size:13px;font-weight:600;color:var(--white);letter-spacing:.06em;text-transform:uppercase}
+.logo-tagline{font-size:10px;color:var(--light);letter-spacing:.08em;text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+.nav-links a{font-size:13px;font-weight:500;color:var(--light);text-decoration:none;letter-spacing:.04em;text-transform:uppercase;transition:color .2s;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:1px;background:var(--teal);transform:scaleX(0);transition:transform .2s}
+.nav-links a:hover{color:var(--white)}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-cta{background:var(--teal)!important;color:var(--white)!important;padding:9px 22px;border-radius:var(--radius);font-weight:600!important;transition:background .2s!important}
+.nav-cta::after{display:none!important}
+.nav-cta:hover{background:var(--teal-light)!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{width:24px;height:2px;background:var(--light);border-radius:2px;transition:all .3s}
+
+/* HERO */
+#hero{min-height:100vh;background:var(--navy);position:relative;display:flex;align-items:center;overflow:hidden}
+.hero-grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(74,144,196,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(74,144,196,.05) 1px,transparent 1px);background-size:64px 64px}
+.hero-glow{position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(27,79,138,.15) 0%,transparent 65%);top:-150px;right:-150px;pointer-events:none}
+.hero-glow-2{position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(42,157,143,.08) 0%,transparent 65%);bottom:-100px;left:10%;pointer-events:none}
+.hero-accent{position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(to bottom,var(--teal),var(--blue),transparent)}
+.hero-inner{position:relative;max-width:1200px;margin:0 auto;padding:8rem 2rem 5rem;display:grid;grid-template-columns:1.1fr .9fr;gap:4rem;align-items:center;width:100%}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:1.5rem}
+.hero-eyebrow span{display:block;width:32px;height:1px;background:var(--teal)}
+h1.hero-title{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,4.5vw,3.8rem);font-weight:700;color:var(--white);line-height:1.12;margin-bottom:1.5rem;letter-spacing:-.01em}
+h1.hero-title em{font-style:normal;color:var(--teal-light);display:block}
+.hero-desc{font-size:17px;color:var(--light);line-height:1.8;margin-bottom:2.5rem;font-weight:300;max-width:520px}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:3.5rem}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--teal);color:var(--white);font-size:14px;font-weight:600;padding:14px 28px;border-radius:var(--radius);text-decoration:none;letter-spacing:.02em;transition:all .2s;border:none;cursor:pointer}
+.btn-primary:hover{background:var(--teal-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(42,157,143,.3)}
+.btn-outline{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--light);font-size:14px;font-weight:500;padding:14px 28px;border-radius:var(--radius);text-decoration:none;border:1px solid rgba(168,200,224,.25);transition:all .2s}
+.btn-outline:hover{border-color:var(--teal);color:var(--teal-light)}
+.hero-trust{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--mid)}
+.trust-dot{width:6px;height:6px;border-radius:50%;background:var(--teal);flex-shrink:0}
+.hero-right{display:flex;flex-direction:column;gap:1rem}
+.stat-cards{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:.5rem}
+.stat-card{background:rgba(255,255,255,.04);border:1px solid rgba(74,144,196,.15);border-radius:var(--radius-lg);padding:1.5rem;text-align:center;transition:all .3s}
+.stat-card:hover{background:rgba(42,157,143,.06);border-color:rgba(42,157,143,.3);transform:translateY(-2px)}
+.stat-number{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:700;color:var(--teal-light);display:block;line-height:1;margin-bottom:6px}
+.stat-label{font-size:11px;color:var(--mid);letter-spacing:.06em;text-transform:uppercase}
+.service-pills{display:flex;flex-direction:column;gap:.75rem}
+.service-pill{display:flex;align-items:center;gap:1rem;background:rgba(255,255,255,.03);border:1px solid rgba(74,144,196,.12);border-radius:var(--radius-lg);padding:1rem 1.25rem;transition:all .3s;cursor:default}
+.service-pill:hover{background:rgba(27,79,138,.1);border-color:rgba(74,144,196,.3);transform:translateX(4px)}
+.pill-icon{width:38px;height:38px;border-radius:var(--radius);background:rgba(42,157,143,.12);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.pill-icon svg{width:18px;height:18px}
+.pill-text strong{display:block;font-size:13px;font-weight:600;color:var(--white);margin-bottom:2px}
+.pill-text span{font-size:12px;color:var(--mid);line-height:1.4}
+
+/* SECTIONS */
+section{padding:6rem 2rem}
+.container{max-width:1200px;margin:0 auto}
+.section-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:1rem}
+.section-eyebrow::before{content:'';display:block;width:20px;height:2px;background:var(--teal);border-radius:2px}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:700;color:var(--text);line-height:1.2;margin-bottom:1rem;letter-spacing:-.01em}
+.section-title.light{color:var(--white)}
+.section-subtitle{font-size:17px;color:var(--text-soft);max-width:560px;line-height:1.75;margin-bottom:3rem;font-weight:300}
+.section-subtitle.light{color:var(--light)}
+.divider{width:48px;height:3px;background:linear-gradient(90deg,var(--teal),var(--blue-light));border-radius:3px;margin-bottom:2rem}
+
+/* ABOUT */
+#about{background:var(--offwhite)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+.about-story p{font-size:16px;color:var(--text-soft);line-height:1.85;margin-bottom:1.25rem;font-weight:300}
+.about-highlight{padding:1.5rem 1.75rem;border-left:3px solid var(--teal);background:var(--white);border-radius:0 var(--radius-lg) var(--radius-lg) 0;margin:2rem 0;box-shadow:var(--shadow-sm)}
+.about-highlight p{font-family:'Playfair Display',serif;font-size:1.05rem;font-style:italic;color:var(--navy);margin:0!important;line-height:1.7}
+.about-values{display:grid;gap:1rem;margin-top:2rem}
+.value-item{display:flex;gap:1rem;padding:1.25rem;background:var(--white);border-radius:var(--radius-lg);border:1px solid rgba(27,79,138,.08);transition:all .3s;box-shadow:var(--shadow-sm)}
+.value-item:hover{border-color:rgba(42,157,143,.3);transform:translateX(4px);box-shadow:var(--shadow-md)}
+.value-icon{width:44px;height:44px;background:var(--teal-pale);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.value-icon svg{width:20px;height:20px}
+.value-text strong{display:block;font-size:14px;font-weight:600;color:var(--text);margin-bottom:4px}
+.value-text p{font-size:13px;color:var(--text-soft);line-height:1.6;margin:0!important}
+
+/* SERVICES */
+#services{background:var(--white)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.75rem}
+.service-card{background:var(--white);border:1px solid rgba(27,79,138,.1);border-radius:var(--radius-lg);padding:2rem;position:relative;overflow:hidden;transition:all .3s;box-shadow:var(--shadow-sm)}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--teal));transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.service-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-6px);border-color:rgba(42,157,143,.2)}
+.service-card:hover::before{transform:scaleX(1)}
+.service-icon{width:54px;height:54px;background:var(--blue-pale);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem}
+.service-icon svg{width:26px;height:26px}
+.service-card h3{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:600;color:var(--text);margin-bottom:.75rem}
+.service-card>p{font-size:14px;color:var(--text-soft);line-height:1.7;margin-bottom:1.5rem;font-weight:300}
+.service-features{list-style:none;display:flex;flex-direction:column;gap:7px}
+.service-features li{font-size:13px;color:var(--text-soft);display:flex;align-items:flex-start;gap:8px;line-height:1.5}
+.service-features li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--teal);flex-shrink:0;margin-top:6px}
+
+/* PROCESS */
+#process{background:var(--offwhite)}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;margin-top:1rem}
+.process-steps::before{content:'';position:absolute;top:36px;left:calc(12.5% + 20px);right:calc(12.5% + 20px);height:2px;background:linear-gradient(90deg,var(--blue),var(--teal));z-index:0}
+.process-step{text-align:center;padding:0 1rem;position:relative;z-index:1}
+.step-num{width:72px;height:72px;border-radius:50%;background:var(--white);border:2px solid var(--blue-pale);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--blue);box-shadow:var(--shadow-sm);transition:all .3s;position:relative;z-index:2}
+.process-step:hover .step-num{background:var(--blue);color:var(--white);border-color:var(--blue);transform:scale(1.08);box-shadow:var(--shadow-md)}
+.process-step h4{font-size:15px;font-weight:600;color:var(--text);margin-bottom:.5rem}
+.process-step p{font-size:13px;color:var(--text-soft);line-height:1.6;font-weight:300}
+
+/* WHY */
+#why{background:var(--navy);position:relative;overflow:hidden}
+#why::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(74,144,196,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(74,144,196,.04) 1px,transparent 1px);background-size:64px 64px}
+.why-glow{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(42,157,143,.07) 0%,transparent 70%);bottom:-100px;right:-100px;pointer-events:none}
+.why-inner{position:relative}
+.why-layout{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem}
+.why-card{background:rgba(255,255,255,.04);border:1px solid rgba(74,144,196,.12);border-radius:var(--radius-lg);padding:1.75rem;transition:all .3s}
+.why-card:hover{background:rgba(42,157,143,.07);border-color:rgba(42,157,143,.3);transform:translateY(-3px)}
+.why-card .num{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:700;color:rgba(42,157,143,.18);line-height:1;margin-bottom:.5rem}
+.why-card h4{font-size:15px;font-weight:600;color:var(--white);margin-bottom:.5rem}
+.why-card p{font-size:13px;color:var(--mid);line-height:1.7;font-weight:300}
+
+/* CTA BANNER */
+#cta-banner{background:linear-gradient(135deg,var(--blue) 0%,var(--navy-soft) 60%,var(--navy) 100%);padding:5rem 2rem;position:relative;overflow:hidden}
+#cta-banner::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:40px 40px}
+.cta-inner{position:relative;max-width:800px;margin:0 auto;text-align:center}
+.cta-inner h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:700;color:var(--white);margin-bottom:1rem;line-height:1.2}
+.cta-inner p{font-size:17px;color:var(--light);margin-bottom:2.5rem;font-weight:300;line-height:1.7}
+.cta-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-white{display:inline-flex;align-items:center;gap:8px;background:var(--white);color:var(--navy);font-size:14px;font-weight:600;padding:14px 28px;border-radius:var(--radius);text-decoration:none;transition:all .2s}
+.btn-white:hover{background:var(--blue-pale);transform:translateY(-2px)}
+
+/* SECTORS */
+#sectors{background:var(--white)}
+.sectors-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+.sector-card{background:var(--offwhite);border:1px solid rgba(27,79,138,.08);border-radius:var(--radius-lg);padding:1.75rem 1.5rem;text-align:center;transition:all .3s}
+.sector-card:hover{background:var(--white);border-color:var(--teal);transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.sector-icon-wrap{width:52px;height:52px;border-radius:50%;background:var(--blue-pale);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;transition:all .3s}
+.sector-card:hover .sector-icon-wrap{background:var(--teal-pale)}
+.sector-icon-wrap svg{width:22px;height:22px}
+.sector-card h4{font-size:14px;font-weight:600;color:var(--text);margin-bottom:6px}
+.sector-card p{font-size:12px;color:var(--text-soft);line-height:1.6}
+
+/* CONTACT */
+#contact{background:var(--navy);position:relative;overflow:hidden}
+#contact::after{content:'';position:absolute;bottom:0;right:0;width:500px;height:500px;background:radial-gradient(circle,rgba(27,79,138,.08) 0%,transparent 70%);pointer-events:none}
+.contact-inner{position:relative;display:grid;grid-template-columns:1fr 1.1fr;gap:5rem;align-items:start}
+.contact-info h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,2.5vw,2.2rem);font-weight:700;color:var(--white);line-height:1.2;margin-bottom:1rem}
+.contact-info>p{font-size:16px;color:var(--light);line-height:1.8;margin-bottom:2.5rem;font-weight:300}
+.contact-details{display:flex;flex-direction:column;gap:1rem;margin-bottom:2.5rem}
+.contact-item{display:flex;align-items:flex-start;gap:14px}
+.contact-item-icon{width:40px;height:40px;background:rgba(42,157,143,.12);border:1px solid rgba(42,157,143,.2);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-item-icon svg{width:16px;height:16px}
+.contact-item-text strong{display:block;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);margin-bottom:2px}
+.contact-item-text span,.contact-item-text a{font-size:14px;color:var(--light);line-height:1.5;text-decoration:none;display:block}
+.contact-item-text a:hover{color:var(--teal-light)}
+.contact-form-wrap{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-xl);padding:2.5rem;backdrop-filter:blur(4px)}
+.contact-form-wrap h3{font-size:18px;font-weight:600;color:var(--white);margin-bottom:1.75rem;padding-bottom:1.25rem;border-bottom:1px solid rgba(255,255,255,.06)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:1rem}
+.form-group label{font-size:11px;font-weight:600;color:var(--light);letter-spacing:.06em;text-transform:uppercase}
+.form-group input,.form-group select,.form-group textarea{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:12px 14px;font-family:'DM Sans',sans-serif;font-size:14px;color:var(--white);outline:none;transition:border-color .2s,background .2s;width:100%}
+.form-group input::placeholder,.form-group textarea::placeholder{color:rgba(168,200,224,.4)}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--teal);background:rgba(42,157,143,.06)}
+.form-group select option{background:var(--navy-mid);color:var(--white)}
+.form-group textarea{resize:vertical;min-height:120px}
+.form-submit{width:100%;padding:15px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;cursor:pointer;letter-spacing:.02em}
+#form-result{display:none;padding:12px 14px;border-radius:var(--radius);font-size:14px;margin-bottom:1rem;line-height:1.5}
+
+/* FOOTER */
+footer{background:#060E1C;padding:5rem 2rem 2rem;border-top:1px solid rgba(74,144,196,.12)}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,.05);margin-bottom:2rem}
+.footer-brand p{font-size:14px;color:var(--mid);line-height:1.7;margin-top:1rem;font-weight:300;max-width:300px}
+.footer-contact{margin-top:1.5rem;display:flex;flex-direction:column;gap:6px}
+.footer-contact a,.footer-contact span{font-size:13px;color:var(--mid);text-decoration:none;transition:color .2s;display:flex;align-items:center;gap:6px}
+.footer-contact a:hover{color:var(--teal-light)}
+.footer-col h5{font-size:11px;font-weight:600;color:var(--teal);letter-spacing:.1em;text-transform:uppercase;margin-bottom:1.25rem}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:.6rem}
+.footer-col ul li a{font-size:13px;color:var(--mid);text-decoration:none;transition:color .2s}
+.footer-col ul li a:hover{color:var(--light)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center}
+.footer-bottom p{font-size:12px;color:var(--slate)}
+.footer-legal{display:flex;gap:1.5rem}
+.footer-legal a{font-size:12px;color:var(--slate);text-decoration:none}
+.footer-legal a:hover{color:var(--mid)}
+
+/* ANIMATIONS */
+.fade-up{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+/* MOBILE NAV */
+.mobile-menu{display:none;position:fixed;top:70px;left:0;right:0;background:rgba(10,22,40,.98);border-top:1px solid rgba(74,144,196,.12);padding:1.5rem 2rem;z-index:99}
+.mobile-menu.open{display:block}
+.mobile-menu a{display:block;font-size:15px;font-weight:500;color:var(--light);text-decoration:none;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.04);transition:color .2s}
+.mobile-menu a:hover{color:var(--teal-light)}
+.mobile-menu a:last-child{border-bottom:none}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .services-grid{grid-template-columns:1fr 1fr}
+  .sectors-grid{grid-template-columns:repeat(2,1fr)}
+  .process-steps{grid-template-columns:repeat(2,1fr);gap:2rem}
+  .process-steps::before{display:none}
+}
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;padding-top:7rem}
+  .hero-right{display:none}
+  .about-grid{grid-template-columns:1fr;gap:3rem}
+  .why-layout{grid-template-columns:1fr;gap:3rem}
+  .contact-inner{grid-template-columns:1fr;gap:3rem}
+  .footer-top{grid-template-columns:1fr 1fr;gap:2rem}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+}
+@media(max-width:640px){
+  section{padding:4rem 1.25rem}
+  .hero-inner{padding:6rem 1.25rem 3rem}
+  .services-grid{grid-template-columns:1fr}
+  .process-steps{grid-template-columns:1fr}
+  .sectors-grid{grid-template-columns:repeat(2,1fr)}
+  .why-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;gap:1rem;text-align:center}
+  .cta-actions{flex-direction:column;align-items:center}
+}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
+<nav id="navbar">
   <div class="nav-inner">
     <a href="#" class="nav-logo">
-      <div class="logo-mark"><img src="assets/images/logo.png" alt="IL" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#1B4F8A,#2A9D8F)';this.parentElement.innerHTML+='<span style=\"font-family:serif;font-weight:700;font-size:15px;color:white;\">IL</span>'"></div>
+      <div class="logo-mark">
+        <img src="assets/images/logo.png" alt="Innovation Lens" onerror="this.parentElement.style.background='linear-gradient(135deg,#1B4F8A,#2A9D8F)';this.style.display='none';this.parentElement.innerHTML+='<span style=\'font-weight:700;font-size:15px;color:white;font-family:serif\'>IL</span>'">
+      </div>
       <div class="logo-text">
         <span class="logo-name">Innovation Lens</span>
         <span class="logo-tagline">Resources Ltd</span>
@@ -994,7 +268,7 @@
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
-      <li><a href="#why">Why Us</a></li>
+      <li><a href="#process">How We Work</a></li>
       <li><a href="#sectors">Sectors</a></li>
       <li><a href="#contact" class="nav-cta">Get In Touch</a></li>
     </ul>
@@ -1007,63 +281,57 @@
 <div class="mobile-menu" id="mobile-menu">
   <a href="#about" onclick="toggleMenu()">About</a>
   <a href="#services" onclick="toggleMenu()">Services</a>
-  <a href="#why" onclick="toggleMenu()">Why Us</a>
+  <a href="#process" onclick="toggleMenu()">How We Work</a>
   <a href="#sectors" onclick="toggleMenu()">Sectors</a>
   <a href="#contact" onclick="toggleMenu()">Get In Touch</a>
 </div>
 
 <!-- HERO -->
 <section id="hero">
-  <div class="hero-bg-pattern"></div>
-  <div class="hero-accent-bar"></div>
-  <div class="hero-orb"></div>
+  <div class="hero-grid-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow-2"></div>
+  <div class="hero-accent"></div>
   <div class="hero-inner">
     <div class="hero-content">
-      <div class="hero-eyebrow">Professional Business Services</div>
+      <div class="hero-eyebrow"><span></span>Professional Business Services &bull; Lagos, Nigeria</div>
       <h1 class="hero-title">
-        Turnaround Solutions for<br>
-        <em>IT, Telecom &amp;</em><br>
-        Business Growth
+        Turnaround Solutions<br>for IT, Telecom
+        <em>&amp; Business Growth</em>
       </h1>
-      <p class="hero-desc">
-        We combine deep sector expertise with hands-on execution to help organisations make better decisions, convert strategy into action, and deliver measurable results.
-      </p>
+      <p class="hero-desc">We combine deep sector expertise with hands-on execution to help organisations make better decisions, convert strategy into action, and deliver measurable results.</p>
       <div class="hero-actions">
-        <a href="#services" class="btn-primary">Explore Our Services &rarr;</a>
+        <a href="#services" class="btn-primary">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 5l7 7-7 7M5 12h15"/></svg>
+          Explore Services
+        </a>
         <a href="#contact" class="btn-outline">Talk to Us</a>
       </div>
+      <div class="hero-trust">
+        <div class="trust-item"><span class="trust-dot"></span>Fixed Asset Management</div>
+        <div class="trust-item"><span class="trust-dot"></span>IT &amp; Telecom</div>
+        <div class="trust-item"><span class="trust-dot"></span>Management Consulting</div>
+      </div>
     </div>
-
-    <div class="hero-visual">
-      <div class="hero-card-stack">
-        <div class="service-preview-card">
-          <div class="spc-icon">&#128200;</div>
-          <div class="spc-title">Fixed Asset Management</div>
-          <div class="spc-desc">Enterprise-grade asset tracking, lifecycle management, and compliance reporting</div>
+    <div class="hero-right">
+      <div class="stat-cards">
+        <div class="stat-card"><span class="stat-number">10+</span><div class="stat-label">Years Experience</div></div>
+        <div class="stat-card"><span class="stat-number">3</span><div class="stat-label">Core Divisions</div></div>
+        <div class="stat-card"><span class="stat-number">100%</span><div class="stat-label">Client Focused</div></div>
+        <div class="stat-card"><span class="stat-number">NG</span><div class="stat-label">Nigeria Based</div></div>
+      </div>
+      <div class="service-pills">
+        <div class="service-pill">
+          <div class="pill-icon"><svg fill="none" stroke="#2A9D8F" stroke-width="1.8" viewBox="0 0 24 24"><path d="M9 17H5a2 2 0 01-2-2V5a2 2 0 012-2h11a2 2 0 012 2v3"/><path d="M13 21l9-9-3-3-9 9v3h3z"/></svg></div>
+          <div class="pill-text"><strong>Fixed Asset Management</strong><span>Enterprise asset tracking &amp; lifecycle management</span></div>
         </div>
-        <div class="service-preview-card">
-          <div class="spc-icon">&#9729;</div>
-          <div class="spc-title">IT &amp; Telecom Solutions</div>
-          <div class="spc-desc">Cloud services, broadband infrastructure, FTTH deployment &amp; managed connectivity</div>
+        <div class="service-pill">
+          <div class="pill-icon"><svg fill="none" stroke="#2A9D8F" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg></div>
+          <div class="pill-text"><strong>IT &amp; Telecom Solutions</strong><span>Cloud, broadband, FTTH &amp; managed connectivity</span></div>
         </div>
-        <div class="service-preview-card">
-          <div class="spc-icon">&#127775;</div>
-          <div class="spc-title">Management Consulting</div>
-          <div class="spc-desc">Strategic advisory, organisational turnaround, and performance optimisation</div>
-        </div>
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;padding:0 0.5rem;margin-top:0.5rem;">
-          <div class="stat-item" style="border-radius:var(--radius-lg);">
-            <span class="stat-number">10+</span>
-            <div class="stat-label">Years Active</div>
-          </div>
-          <div class="stat-item" style="border-radius:var(--radius-lg);">
-            <span class="stat-number">3</span>
-            <div class="stat-label">Core Divisions</div>
-          </div>
-          <div class="stat-item" style="border-radius:var(--radius-lg);">
-            <span class="stat-number">&#8734;</span>
-            <div class="stat-label">Commitment</div>
-          </div>
+        <div class="service-pill">
+          <div class="pill-icon"><svg fill="none" stroke="#2A9D8F" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+          <div class="pill-text"><strong>Management Consulting</strong><span>Strategic advisory &amp; organisational turnaround</span></div>
         </div>
       </div>
     </div>
@@ -1076,43 +344,34 @@
     <div class="about-grid">
       <div class="about-story fade-up">
         <div class="section-eyebrow">Who We Are</div>
-        <h2 class="section-title">Built by practitioners, for real-world impact</h2>
+        <h2 class="section-title">Built by practitioners,<br>for real-world impact</h2>
         <div class="divider"></div>
         <p>Innovation Lens Resources Ltd was founded by a group of experienced professionals who spent years working inside leading IT/Telecom companies, consulting firms, and advisory organisations. We came together to put collective skill and talent to work, directly, for clients who need it.</p>
         <div class="about-highlight">
           <p>"It is our belief that talent, skill and experience can create value and help find solutions to client needs. Our goal is to deliver qualitative expert services efficaciously, adding value to the client's business and sustaining enduring relationships."</p>
         </div>
         <p>We work with selective and experienced executives to help them make better decisions, convert those decisions into action, and deliver success on their terms. We're passionate about result-oriented outcomes, not just activity.</p>
-        <p>Since our beginning we've grown through individual partnerships, expanding our team based on project deliverables and deep domain experience. We believe in technology, tools, and innovation that save time and deliver projects efficiently.</p>
+        <p>Since our beginning, we've grown through individual partnerships, expanding our team based on project deliverables and deep domain experience. We believe in technology, tools, and innovation that save time and deliver projects efficiently.</p>
+        <div style="margin-top:2rem">
+          <a href="#contact" class="btn-primary" style="display:inline-flex">Work With Us <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 5l7 7-7 7M5 12h15"/></svg></a>
+        </div>
       </div>
       <div class="about-values fade-up">
         <div class="value-item">
-          <div class="value-icon">&#127919;</div>
-          <div class="value-text">
-            <strong>Result-Oriented Delivery</strong>
-            <p>We're passionate about outcomes, not just processes. Every engagement is measured by what it achieves for your business.</p>
-          </div>
+          <div class="value-icon"><svg fill="none" stroke="#2A9D8F" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+          <div class="value-text"><strong>Result-Oriented Delivery</strong><p>We're passionate about outcomes, not just processes. Every engagement is measured by what it achieves for your business.</p></div>
         </div>
         <div class="value-item">
-          <div class="value-icon">&#128101;</div>
-          <div class="value-text">
-            <strong>Experienced, Independent Teams</strong>
-            <p>Our team members maintain their independence and deliver truth. We work across all circumstances, environments, and cultures.</p>
-          </div>
+          <div class="value-icon"><svg fill="none" stroke="#2A9D8F" stroke-width="1.8" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+          <div class="value-text"><strong>Experienced, Independent Teams</strong><p>Our team members maintain their independence and deliver truth. We work across all circumstances, environments, and cultures.</p></div>
         </div>
         <div class="value-item">
-          <div class="value-icon">&#128200;</div>
-          <div class="value-text">
-            <strong>Simplicity &amp; Transparency</strong>
-            <p>Simplicity, transparency, and our approach toward excellence are the tools we use to deliver success and value to clients.</p>
-          </div>
+          <div class="value-icon"><svg fill="none" stroke="#2A9D8F" stroke-width="1.8" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <div class="value-text"><strong>Simplicity &amp; Transparency</strong><p>Simplicity, transparency, and our approach toward excellence are the key tools to deliver success and value to clients.</p></div>
         </div>
         <div class="value-item">
-          <div class="value-icon">&#128279;</div>
-          <div class="value-text">
-            <strong>Relationships First</strong>
-            <p>We build long-lasting relationships throughout every project. Smart, driven people who care about more than just getting things done.</p>
-          </div>
+          <div class="value-icon"><svg fill="none" stroke="#2A9D8F" stroke-width="1.8" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+          <div class="value-text"><strong>Relationships First</strong><p>We build long-lasting relationships throughout every project. Smart, driven people who care about more than just getting things done.</p></div>
         </div>
       </div>
     </div>
@@ -1122,15 +381,14 @@
 <!-- SERVICES -->
 <section id="services">
   <div class="container">
-    <div style="text-align:center;max-width:640px;margin:0 auto 3rem;">
-      <div class="section-eyebrow" style="justify-content:center;">What We Do</div>
+    <div style="text-align:center;max-width:640px;margin:0 auto 3.5rem">
+      <div class="section-eyebrow" style="justify-content:center">What We Do</div>
       <h2 class="section-title">Our Core Service Areas</h2>
-      <p class="section-subtitle" style="margin:0 auto;">Three focused practice areas, each staffed with sector specialists who've done the work before.</p>
+      <p class="section-subtitle" style="margin:0 auto">Three focused practice areas, each staffed with sector specialists who've done the work before.</p>
     </div>
     <div class="services-grid">
-
       <div class="service-card fade-up">
-        <div class="service-icon">&#128200;</div>
+        <div class="service-icon"><svg fill="none" stroke="#1B4F8A" stroke-width="1.8" viewBox="0 0 24 24"><path d="M9 17H5a2 2 0 01-2-2V5a2 2 0 012-2h11a2 2 0 012 2v3"/><path d="M13 21l9-9-3-3-9 9v3h3z"/></svg></div>
         <h3>Fixed Asset Management</h3>
         <p>Comprehensive solutions for tracking, managing, and optimising your organisation's fixed assets throughout their full lifecycle. We reduce loss, improve compliance, and give leadership accurate visibility.</p>
         <ul class="service-features">
@@ -1141,9 +399,8 @@
           <li>Software selection &amp; implementation</li>
         </ul>
       </div>
-
-      <div class="service-card fade-up" style="transition-delay:0.1s;">
-        <div class="service-icon">&#9729;</div>
+      <div class="service-card fade-up" style="transition-delay:.1s">
+        <div class="service-icon"><svg fill="none" stroke="#1B4F8A" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg></div>
         <h3>IT &amp; Telecom Solutions</h3>
         <p>End-to-end connectivity and cloud infrastructure services. From FTTH deployment to enterprise broadband and cloud migrations, we design, deploy, and manage the infrastructure that keeps businesses running.</p>
         <ul class="service-features">
@@ -1154,9 +411,8 @@
           <li>Managed IT support &amp; monitoring</li>
         </ul>
       </div>
-
-      <div class="service-card fade-up" style="transition-delay:0.2s;">
-        <div class="service-icon">&#127775;</div>
+      <div class="service-card fade-up" style="transition-delay:.2s">
+        <div class="service-icon"><svg fill="none" stroke="#1B4F8A" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
         <h3>Management Consulting</h3>
         <p>Strategic advisory for organisations navigating transformation, growth, or operational challenges. We partner with leadership teams to design strategy and drive execution that sticks.</p>
         <ul class="service-features">
@@ -1167,44 +423,77 @@
           <li>Executive advisory &amp; board support</li>
         </ul>
       </div>
+    </div>
+  </div>
+</section>
 
+<!-- PROCESS -->
+<section id="process">
+  <div class="container">
+    <div style="text-align:center;max-width:600px;margin:0 auto 4rem">
+      <div class="section-eyebrow" style="justify-content:center">How We Work</div>
+      <h2 class="section-title">Our Engagement Process</h2>
+      <p class="section-subtitle" style="margin:0 auto">A structured, transparent approach from first conversation to measurable outcome.</p>
+    </div>
+    <div class="process-steps">
+      <div class="process-step fade-up">
+        <div class="step-num">01</div>
+        <h4>Discovery</h4>
+        <p>We listen first. Understanding your business, challenges, and goals before proposing anything.</p>
+      </div>
+      <div class="process-step fade-up" style="transition-delay:.1s">
+        <div class="step-num">02</div>
+        <h4>Strategy</h4>
+        <p>We design a clear, actionable plan tailored to your specific context and desired outcomes.</p>
+      </div>
+      <div class="process-step fade-up" style="transition-delay:.2s">
+        <div class="step-num">03</div>
+        <h4>Execution</h4>
+        <p>Our team rolls up its sleeves and delivers, hands-on from start to finish, not just advisory memos.</p>
+      </div>
+      <div class="process-step fade-up" style="transition-delay:.3s">
+        <div class="step-num">04</div>
+        <h4>Handover</h4>
+        <p>We ensure your team is fully equipped to sustain the results after we step back.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- WHY US -->
 <section id="why">
+  <div class="why-glow"></div>
   <div class="container why-inner">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;">
+    <div class="why-layout">
       <div class="fade-up">
         <div class="section-eyebrow">Why Choose Us</div>
         <h2 class="section-title light">What makes Innovation Lens different</h2>
         <div class="divider"></div>
-        <p class="section-subtitle light">We're not a faceless firm. Every engagement is led by practitioners with real-world scar tissue from the industries we serve.</p>
+        <p class="section-subtitle light" style="margin-bottom:2rem">We're not a faceless consultancy. Every engagement is led by practitioners with real-world experience in the industries we serve.</p>
+        <a href="#contact" class="btn-primary">Start a Conversation <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 5l7 7-7 7M5 12h15"/></svg></a>
       </div>
       <div>
         <div class="why-grid">
-          <div class="why-card fade-up">
-            <div class="num">01</div>
-            <h4>Practitioner-Led</h4>
-            <p>Our consultants have done the actual work inside telecoms, IT, and business operations. No theory without practice.</p>
-          </div>
-          <div class="why-card fade-up" style="transition-delay:0.1s;">
-            <div class="num">02</div>
-            <h4>Selective Partnerships</h4>
-            <p>We choose clients we can genuinely help. That selectivity means every engagement gets our full attention and real accountability.</p>
-          </div>
-          <div class="why-card fade-up" style="transition-delay:0.15s;">
-            <div class="num">03</div>
-            <h4>Cross-Cultural Agility</h4>
-            <p>Our teams work effectively across different environments, cultures, and regulatory contexts in Nigeria and beyond.</p>
-          </div>
-          <div class="why-card fade-up" style="transition-delay:0.2s;">
-            <div class="num">04</div>
-            <h4>End-to-End Execution</h4>
-            <p>We don't just advise. We roll up our sleeves and deliver, from strategy design through to implementation and handover.</p>
-          </div>
+          <div class="why-card fade-up"><div class="num">01</div><h4>Practitioner-Led</h4><p>Our consultants have done the actual work inside telecoms, IT, and business operations. No theory without practice.</p></div>
+          <div class="why-card fade-up" style="transition-delay:.1s"><div class="num">02</div><h4>Selective Partnerships</h4><p>We choose clients we can genuinely help. That selectivity means every engagement gets our full attention.</p></div>
+          <div class="why-card fade-up" style="transition-delay:.15s"><div class="num">03</div><h4>Cross-Cultural Agility</h4><p>Our teams work effectively across different environments, cultures, and regulatory contexts in Nigeria and beyond.</p></div>
+          <div class="why-card fade-up" style="transition-delay:.2s"><div class="num">04</div><h4>End-to-End Execution</h4><p>We don't just advise. We roll up our sleeves and deliver, from strategy through to implementation and handover.</p></div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section id="cta-banner">
+  <div class="container">
+    <div class="cta-inner fade-up">
+      <div class="section-eyebrow" style="justify-content:center;color:var(--teal-light)">Ready to Get Started?</div>
+      <h2>Let's solve your business challenges together</h2>
+      <p>Whether you need to get your assets under control, upgrade your connectivity infrastructure, or rethink your business strategy, we're ready to engage.</p>
+      <div class="cta-actions">
+        <a href="#contact" class="btn-white">Send Us a Message</a>
+        <a href="tel:+2348022191125" class="btn-outline">+234 802 219 1125</a>
       </div>
     </div>
   </div>
@@ -1213,50 +502,43 @@
 <!-- SECTORS -->
 <section id="sectors">
   <div class="container">
-    <div style="text-align:center;max-width:580px;margin:0 auto 3rem;">
-      <div class="section-eyebrow" style="justify-content:center;">Industries We Serve</div>
+    <div style="text-align:center;max-width:580px;margin:0 auto 3rem">
+      <div class="section-eyebrow" style="justify-content:center">Industries We Serve</div>
       <h2 class="section-title">Sector Experience</h2>
+      <p class="section-subtitle" style="margin:0 auto">Our team brings direct experience across a broad range of industries.</p>
     </div>
     <div class="sectors-grid">
       <div class="sector-card fade-up">
-        <span class="sector-icon">&#128225;</span>
-        <h4>Telecommunications</h4>
-        <p>Network operators, ISPs, and FTTH providers across Nigeria</p>
+        <div class="sector-icon-wrap"><svg fill="none" stroke="#1B4F8A" stroke-width="1.8" viewBox="0 0 24 24"><path d="M1 6l5 2 5-4 5 4 5-2v14l-5 2-5-4-5 4-5-2z"/></svg></div>
+        <h4>Telecommunications</h4><p>Network operators, ISPs, and FTTH providers across Nigeria</p>
       </div>
-      <div class="sector-card fade-up" style="transition-delay:0.05s;">
-        <span class="sector-icon">&#127981;</span>
-        <h4>Enterprise &amp; Corporate</h4>
-        <p>Large organisations needing asset governance and operational efficiency</p>
+      <div class="sector-card fade-up" style="transition-delay:.05s">
+        <div class="sector-icon-wrap"><svg fill="none" stroke="#1B4F8A" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <h4>Enterprise &amp; Corporate</h4><p>Large organisations needing asset governance and operational efficiency</p>
       </div>
-      <div class="sector-card fade-up" style="transition-delay:0.1s;">
-        <span class="sector-icon">&#127979;</span>
-        <h4>Public Sector</h4>
-        <p>Government agencies and parastatals requiring compliant asset frameworks</p>
+      <div class="sector-card fade-up" style="transition-delay:.1s">
+        <div class="sector-icon-wrap"><svg fill="none" stroke="#1B4F8A" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h4>Public Sector</h4><p>Government agencies and parastatals requiring compliant asset frameworks</p>
       </div>
-      <div class="sector-card fade-up" style="transition-delay:0.15s;">
-        <span class="sector-icon">&#9866;</span>
-        <h4>Financial Services</h4>
-        <p>Banks and fintechs needing IT infrastructure and process advisory</p>
+      <div class="sector-card fade-up" style="transition-delay:.15s">
+        <div class="sector-icon-wrap"><svg fill="none" stroke="#1B4F8A" stroke-width="1.8" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><path d="M1 10h22"/></svg></div>
+        <h4>Financial Services</h4><p>Banks and fintechs needing IT infrastructure and process advisory</p>
       </div>
-      <div class="sector-card fade-up" style="transition-delay:0.2s;">
-        <span class="sector-icon">&#9877;</span>
-        <h4>Healthcare</h4>
-        <p>Hospitals and clinics managing high-value medical equipment assets</p>
+      <div class="sector-card fade-up" style="transition-delay:.2s">
+        <div class="sector-icon-wrap"><svg fill="none" stroke="#1B4F8A" stroke-width="1.8" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <h4>Healthcare</h4><p>Hospitals and clinics managing high-value medical equipment assets</p>
       </div>
-      <div class="sector-card fade-up" style="transition-delay:0.25s;">
-        <span class="sector-icon">&#127968;</span>
-        <h4>Real Estate &amp; Hospitality</h4>
-        <p>Property firms managing diverse fixed asset portfolios</p>
+      <div class="sector-card fade-up" style="transition-delay:.25s">
+        <div class="sector-icon-wrap"><svg fill="none" stroke="#1B4F8A" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
+        <h4>Real Estate &amp; Hospitality</h4><p>Property firms managing diverse fixed asset portfolios</p>
       </div>
-      <div class="sector-card fade-up" style="transition-delay:0.3s;">
-        <span class="sector-icon">&#128722;</span>
-        <h4>Retail &amp; FMCG</h4>
-        <p>Consumer goods companies needing streamlined operations and IT support</p>
+      <div class="sector-card fade-up" style="transition-delay:.3s">
+        <div class="sector-icon-wrap"><svg fill="none" stroke="#1B4F8A" stroke-width="1.8" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div>
+        <h4>Retail &amp; FMCG</h4><p>Consumer goods companies needing streamlined operations and IT support</p>
       </div>
-      <div class="sector-card fade-up" style="transition-delay:0.35s;">
-        <span class="sector-icon">&#9654;</span>
-        <h4>Startups &amp; SMEs</h4>
-        <p>Growing businesses building scalable infrastructure from the ground up</p>
+      <div class="sector-card fade-up" style="transition-delay:.35s">
+        <div class="sector-icon-wrap"><svg fill="none" stroke="#1B4F8A" stroke-width="1.8" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <h4>Startups &amp; SMEs</h4><p>Growing businesses building scalable infrastructure from the ground up</p>
       </div>
     </div>
   </div>
@@ -1272,42 +554,47 @@
         <p>Whether you're dealing with an asset management challenge, planning a connectivity upgrade, or need strategic support, we're ready to engage. Send us a message and we'll respond within one business day.</p>
         <div class="contact-details">
           <div class="contact-item">
-            <div class="contact-item-icon">&#128205;</div>
-            <span>Nigeria (Head Office)</span>
+            <div class="contact-item-icon"><svg fill="none" stroke="#2A9D8F" stroke-width="1.8" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div class="contact-item-text">
+              <strong>Address</strong>
+              <span>724A Babatunde Atere, Omole Phase 2,<br>Lagos, Nigeria</span>
+            </div>
           </div>
           <div class="contact-item">
-            <div class="contact-item-icon">&#9993;</div>
-            <span>info@innolensresources.com</span>
+            <div class="contact-item-icon"><svg fill="none" stroke="#2A9D8F" stroke-width="1.8" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.5a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.83a16 16 0 006.29 6.29l1.06-1.34a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+            <div class="contact-item-text">
+              <strong>Phone</strong>
+              <a href="tel:+2348022191125">+234 802 219 1125</a>
+            </div>
           </div>
           <div class="contact-item">
-            <div class="contact-item-icon">&#127760;</div>
-            <span>www.innolensresources.com</span>
+            <div class="contact-item-icon"><svg fill="none" stroke="#2A9D8F" stroke-width="1.8" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div class="contact-item-text">
+              <strong>Email</strong>
+              <a href="mailto:info@innolensresources.com">info@innolensresources.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><svg fill="none" stroke="#2A9D8F" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
+            <div class="contact-item-text">
+              <strong>Website</strong>
+              <span>www.innolensresources.com</span>
+            </div>
           </div>
         </div>
       </div>
-
-      <div class="contact-form fade-up" style="transition-delay:0.15s;">
+      <div class="contact-form-wrap fade-up" style="transition-delay:.15s">
+        <h3>Send us a message</h3>
         <input type="hidden" name="access_key" value="01ffcb93-f572-497e-8275-9adfc6e9301a">
         <input type="hidden" name="subject" value="New Enquiry - Innovation Lens Resources Ltd">
         <input type="hidden" name="from_name" value="Innovation Lens Website">
         <div class="form-row">
-          <div class="form-group">
-            <label>First Name</label>
-            <input type="text" name="first_name" placeholder="Ade" required>
-          </div>
-          <div class="form-group">
-            <label>Last Name</label>
-            <input type="text" name="last_name" placeholder="Okafor" required>
-          </div>
+          <div class="form-group"><label>First Name *</label><input type="text" name="first_name" placeholder="Ade" required></div>
+          <div class="form-group"><label>Last Name *</label><input type="text" name="last_name" placeholder="Okafor" required></div>
         </div>
-        <div class="form-group">
-          <label>Email Address</label>
-          <input type="email" name="email" placeholder="you@organisation.com" required>
-        </div>
-        <div class="form-group">
-          <label>Organisation</label>
-          <input type="text" name="organisation" placeholder="Your company name">
-        </div>
+        <div class="form-group"><label>Email Address *</label><input type="email" name="email" placeholder="you@organisation.com" required></div>
+        <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" placeholder="+234 800 000 0000"></div>
+        <div class="form-group"><label>Organisation</label><input type="text" name="organisation" placeholder="Your company name"></div>
         <div class="form-group">
           <label>Service of Interest</label>
           <select name="service">
@@ -1320,14 +607,10 @@
             <option>Other / General Enquiry</option>
           </select>
         </div>
-        <div class="form-group">
-          <label>Message</label>
-          <textarea name="message" placeholder="Briefly describe what you need help with..." required></textarea>
-        </div>
-        <!-- Honeypot -->
-        <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
-        <div id="form-result" style="display:none;padding:12px;border-radius:6px;font-size:14px;margin-bottom:1rem;"></div>
-        <button class="btn-primary form-submit" id="submit-btn" onclick="handleSubmit(event)">Send Message &rarr;</button>
+        <div class="form-group"><label>Message *</label><textarea name="message" placeholder="Briefly describe what you need help with..." required></textarea></div>
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+        <div id="form-result"></div>
+        <button class="btn-primary form-submit" id="submit-btn" onclick="handleSubmit(event)">Send Message <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 5l7 7-7 7M5 12h15"/></svg></button>
       </div>
     </div>
   </div>
@@ -1338,14 +621,16 @@
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <div class="nav-logo" style="margin-bottom:0.75rem;">
-          <div class="logo-mark"><img src="assets/images/logo.png" alt="IL" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#1B4F8A,#2A9D8F)';this.parentElement.innerHTML+='<span style=\"font-family:serif;font-weight:700;font-size:15px;color:white;\">IL</span>'"></div>
-          <div class="logo-text">
-            <span class="logo-name">Innovation Lens</span>
-            <span class="logo-tagline">Resources Ltd</span>
-          </div>
-        </div>
+        <a href="#" class="nav-logo" style="text-decoration:none">
+          <div class="logo-mark"><img src="assets/images/logo.png" alt="IL" onerror="this.parentElement.style.background='linear-gradient(135deg,#1B4F8A,#2A9D8F)';this.style.display='none';this.parentElement.innerHTML+='<span style=\'font-weight:700;font-size:15px;color:white;font-family:serif\'>IL</span>'"></div>
+          <div class="logo-text"><span class="logo-name">Innovation Lens</span><span class="logo-tagline">Resources Ltd</span></div>
+        </a>
         <p>A professional business services firm delivering turnaround solutions in IT/Telecom and management consulting. We help organisations make better decisions and execute with confidence.</p>
+        <div class="footer-contact">
+          <a href="tel:+2348022191125">+234 802 219 1125</a>
+          <a href="mailto:info@innolensresources.com">info@innolensresources.com</a>
+          <span>724A Babatunde Atere, Omole Phase 2, Lagos</span>
+        </div>
       </div>
       <div class="footer-col">
         <h5>Services</h5>
@@ -1361,6 +646,7 @@
         <h5>Company</h5>
         <ul>
           <li><a href="#about">About Us</a></li>
+          <li><a href="#process">How We Work</a></li>
           <li><a href="#why">Why Innovation Lens</a></li>
           <li><a href="#sectors">Industries</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -1370,128 +656,75 @@
         <h5>Connect</h5>
         <ul>
           <li><a href="mailto:info@innolensresources.com">Email Us</a></li>
+          <li><a href="tel:+2348022191125">Call Us</a></li>
           <li><a href="#contact">Request a Call</a></li>
-          <li><a href="#">LinkedIn</a></li>
+          <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2025 Innovation Lens Resources Ltd. All rights reserved.</p>
-      <div class="footer-legal">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Use</a>
-      </div>
+      <p>&copy; 2026 Innovation Lens Resources Ltd. All rights reserved.</p>
+      <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
     </div>
   </div>
 </footer>
 
 <script>
-  function toggleMenu() {
-    const m = document.getElementById('mobile-menu');
-    m.classList.toggle('open');
-  }
+window.addEventListener('scroll',()=>document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>40));
 
-  document.addEventListener('click', function(e) {
-    const menu = document.getElementById('mobile-menu');
-    const hamburger = document.getElementById('hamburger');
-    if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
-      menu.classList.remove('open');
-    }
+function toggleMenu(){document.getElementById('mobile-menu').classList.toggle('open')}
+
+document.addEventListener('click',function(e){
+  const m=document.getElementById('mobile-menu'),h=document.getElementById('hamburger');
+  if(!m.contains(e.target)&&!h.contains(e.target))m.classList.remove('open');
+});
+
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible')});
+},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+
+document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+
+function showResult(el,type,msg){
+  el.style.display='block';
+  if(type==='success'){el.style.background='rgba(42,157,143,.15)';el.style.color='#2A9D8F';el.style.border='1px solid rgba(42,157,143,.3)';}
+  else{el.style.background='rgba(220,50,50,.1)';el.style.color='#ff6b6b';el.style.border='1px solid rgba(220,50,50,.2)';}
+  el.textContent=msg;
+}
+
+async function handleSubmit(e){
+  e.preventDefault();
+  const btn=document.getElementById('submit-btn');
+  const result=document.getElementById('form-result');
+  const form=btn.closest('.contact-form-wrap');
+  const firstName=form.querySelector('[name="first_name"]').value.trim();
+  const lastName=form.querySelector('[name="last_name"]').value.trim();
+  const email=form.querySelector('[name="email"]').value.trim();
+  const message=form.querySelector('[name="message"]').value.trim();
+  const emailRegex=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if(!firstName||!lastName){showResult(result,'error','Please enter your first and last name.');return;}
+  if(!email||!emailRegex.test(email)){showResult(result,'error','Please enter a valid email address.');return;}
+  if(!message){showResult(result,'error','Please enter a message before submitting.');return;}
+  btn.textContent='Sending...';btn.disabled=true;btn.style.opacity='.7';
+  const payload={access_key:'01ffcb93-f572-497e-8275-9adfc6e9301a',subject:'New Enquiry - Innovation Lens Resources Ltd',from_name:'Innovation Lens Website'};
+  form.querySelectorAll('input:not([type=checkbox]),select,textarea').forEach(el=>{
+    if(el.name&&!['access_key','subject','from_name'].includes(el.name))payload[el.name]=el.value;
   });
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-  function showResult(el, type, msg) {
-    el.style.display = 'block';
-    if (type === 'success') {
-      el.style.background = 'rgba(42,157,143,0.15)';
-      el.style.color = '#2A9D8F';
-      el.style.border = '1px solid rgba(42,157,143,0.3)';
-    } else {
-      el.style.background = 'rgba(220,50,50,0.1)';
-      el.style.color = '#ff6b6b';
-      el.style.border = '1px solid rgba(220,50,50,0.2)';
-    }
-    el.textContent = msg;
+  try{
+    const response=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)});
+    const data=await response.json();
+    if(data.success){
+      showResult(result,'success','Message sent successfully. We will be in touch within one business day.');
+      form.querySelectorAll('input:not([type=hidden]):not([type=checkbox]),select,textarea').forEach(el=>el.value='');
+      btn.textContent='Message Sent!';
+      setTimeout(()=>{btn.innerHTML='Send Message <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 5l7 7-7 7M5 12h15"/></svg>';btn.disabled=false;btn.style.opacity='';result.style.display='none';},5000);
+    }else{throw new Error(data.message||'Submission failed');}
+  }catch(err){
+    showResult(result,'error','Something went wrong. Please try again or email info@innolensresources.com directly.');
+    btn.innerHTML='Send Message <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 5l7 7-7 7M5 12h15"/></svg>';
+    btn.disabled=false;btn.style.opacity='';
   }
-
-  async function handleSubmit(e) {
-    e.preventDefault();
-    const btn = document.getElementById('submit-btn');
-    const result = document.getElementById('form-result');
-    const form = btn.closest('.contact-form');
-
-    // Validation
-    const firstName = form.querySelector('[name="first_name"]').value.trim();
-    const lastName = form.querySelector('[name="last_name"]').value.trim();
-    const email = form.querySelector('[name="email"]').value.trim();
-    const message = form.querySelector('[name="message"]').value.trim();
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (!firstName || !lastName) {
-      showResult(result, 'error', 'Please enter your first and last name.');
-      return;
-    }
-    if (!email || !emailRegex.test(email)) {
-      showResult(result, 'error', 'Please enter a valid email address.');
-      return;
-    }
-    if (!message) {
-      showResult(result, 'error', 'Please enter a message before submitting.');
-      return;
-    }
-
-    btn.textContent = 'Sending...';
-    btn.disabled = true;
-    btn.style.opacity = '0.7';
-
-    const payload = {
-      access_key: '01ffcb93-f572-497e-8275-9adfc6e9301a',
-      subject: 'New Enquiry - Innovation Lens Resources Ltd',
-      from_name: 'Innovation Lens Website'
-    };
-    form.querySelectorAll('input:not([type=checkbox]), select, textarea').forEach(el => {
-      if (el.name && !['access_key','subject','from_name'].includes(el.name)) {
-        payload[el.name] = el.value;
-      }
-    });
-
-    try {
-      const response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-      const data = await response.json();
-
-      if (data.success) {
-        showResult(result, 'success', 'Message sent successfully. We will be in touch within one business day.');
-        form.querySelectorAll('input:not([type=hidden]):not([type=checkbox]), select, textarea').forEach(el => el.value = '');
-        btn.textContent = 'Message Sent!';
-        setTimeout(() => {
-          btn.textContent = 'Send Message →';
-          btn.disabled = false;
-          btn.style.opacity = '';
-          result.style.display = 'none';
-        }, 5000);
-      } else {
-        throw new Error(data.message || 'Submission failed');
-      }
-    } catch (err) {
-      showResult(result, 'error', 'Something went wrong. Please try again or email info@innolensresources.com directly.');
-      btn.textContent = 'Send Message →';
-      btn.disabled = false;
-      btn.style.opacity = '';
-    }
-  }
+}
 </script>
 </body>
 </html>
