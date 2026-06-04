@@ -1,4 +1,16 @@
 {
-    "cleanUrls": true,
-    "trailingSlash": false
-  }
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/webmail",
+      "destination": "https://32.qservers.net:2096",
+      "permanent": false
+    },
+    {
+      "source": "/cpanel",
+      "destination": "https://32.qservers.net:2083",
+      "permanent": false
+    }
+  ]
+}
